@@ -1,0 +1,110 @@
+<h4 class="header center ">PRODUCTOS</h4>
+		<article>
+		<div class="container">
+		<div class="section">		
+      		 <form >
+      		 	<div class="row">
+				<div class="input-field col l5 s12">
+					 <select class="browser-default">
+					      <option value="" disabled selected>ID vendedor</option>
+					      <option value="1">Option 1</option>
+					      <option value="2">Option 2</option>
+					      <option value="3">Option 3</option>
+					    </select>
+				</div>
+				<div class="col l2 s12"></div>
+
+				<div class="input-field col l5 s12">
+					<i class="material-icons prefix">mode_edit</i>
+					 <input  id="idProduc" type="number" class="validate" ng-model="rProducto.id">
+			         <label for="idProduc">ID producto</label> 
+			         <span class="helper-text" data-error="wrong" data-success="">Helper text</span> 
+				</div>
+				</div>
+
+				<div class="row">
+				<div class="input-field col l5 s12">
+					  <i class="material-icons prefix">local_offer</i>
+					  <input  id="nombreProd" type="text" class="validate" ng-model="rProducto.name">
+			          <label for="nombreProd">Nombre Producto</label>
+			          <span class="helper-text" data-error="wrong" data-success="">Helper text</span>
+				</div>
+				<div class="col l2 s12"></div>
+
+				<div class="input-field col l5 s12">
+					<i class="material-icons prefix">mode_edit</i>
+					<input  id="idProduc" type="number" class="validate" ng-model="rProducto.id">
+			        <label for="idProduc">cantidad</label>
+			        <span class="helper-text" data-error="wrong" data-success="">Helper text</span>  
+				</div>
+				</div>
+
+				<div class="row">
+				<div class="input-field col l5 s12">
+					<i class="material-icons prefix">attach_money</i>					
+			         <input  id="precio" type="number" class="validate" ng-model="rProducto.id">
+			          <label for="precio">precio</label>
+			           <span class="helper-text" data-error="wrong" data-success="">Helper text</span>
+				</div>
+				<div class="col l2 s12"></div>
+
+				<div class="input-field col l5 s12">
+					  <i class="material-icons prefix">comment</i>
+					  <input  id="descripcion" type="text" class="validate" ng-model="rProducto.username">
+			          <label for="descripcion">descripcion</label>
+			          <span class="helper-text" data-error="wrong" data-success="">Helper text</span>
+				</div>
+				</div>
+
+				<div class="row " >
+	 			<div class="input-field col l2 s8 right">
+					 <a class="waves-effect blue btn">Modificar</a>   
+				</div>
+				<div class="input-field col l2 s8 right">
+					<a class="waves-effect blue btn" ng-click="Consultar()">Consultar</a> 
+				</div>
+				<div class="input-field col l2 s8 right">
+					<a class="waves-effect blue btn" ng-click="Registar()">Registrar</a>
+				</div>
+				</div>
+			</form>
+      		
+      	
+      		<br>
+            <!--fin formulario-->
+
+			<!--tabla de compra de los productos-->
+			<table class="responsive-table striped highlight" ng-show="formVisibility">
+		        <thead>
+		          <tr>
+		              <th>idProd</th>
+		              <th>Nombre del Producto</th>
+		              <th>presentacion</th>
+		              <th>cantidad</th>
+		              <th>precio</th>
+		              <th>idUser</th>
+		          </tr>
+		        </thead>
+
+		        <tbody>
+		          <tr ng-repeat="produ in product">
+			            <td>{{produ.id}}</td>
+			            <td>{{produ.id}}</td>
+			            <td>{{produ.id}}</td>
+			            <td>{{produ.id}}</td>
+			            <td>{{produ.id}}</td>
+			            <td>{{produ.id}}</td>
+		          </tr>		         
+		        </tbody>
+      		</table>
+      		<br><br>
+      		<!--fin de la tabla-->
+
+  		
+
+		</div>						
+		</div>
+		</article>
+				
+
+	<!--fin de la seccion principal-->

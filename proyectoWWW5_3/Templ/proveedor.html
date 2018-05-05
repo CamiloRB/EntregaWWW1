@@ -1,0 +1,68 @@
+<h4 class="header center ">PROVEEDORES</h4>
+		<article>
+		<div class="container">
+		<div class="section">
+
+			<!--formulario-->
+            <form class="row">
+				<div class="input-field col l5 s12">
+					 <i class="material-icons prefix">mode_edit</i>
+					 <input  id="idProduc" type="number" class="validate" ng-model="rProveedor.id">
+			         <label for="idProduc">cc</label>
+			         <span class="helper-text" data-error="wrong" data-success="">Helper text</span>
+				</div>
+				<div class="col l2 s12"></div>
+
+				<div class="input-field col l5 s12">
+					<i class="material-icons prefix">account_circle</i>
+					 <input  id="nombreProve" type="text" class="validate" ng-model="rProveedor.title">
+			        <label for="nombreProve">Nombre</label>
+			         <span class="helper-text" data-error="wrong" data-success="">Helper text</span>
+				</div>
+			</form>
+
+            <div class=" row ">
+            	<div class="input-field col l2 s12 right">
+					<a class="waves-effect blue btn">Modificar</a> 
+				</div>	
+      			<div class="input-field col l2 s12 right">
+					<a class="waves-effect blue btn" ng-click="Consultar()">Consultar</a>
+				</div>
+				<div class="input-field col l2 s12 right">
+					 <a class="waves-effect blue btn" ng-click="Registrar()">Registrar</a> 
+				</div>
+			</div>
+      		
+      	
+      		<br>
+            <!--fin formulario-->
+
+			<!--tabla de proveedor-->
+			<table class="responsive-table striped highlight" ng-show="formVisibility">
+		        <thead>
+		          <tr>
+		              <th>id</th>
+		              <th>Nombre</th>
+		              <th>cc</th>
+		          </tr>
+		        </thead>
+
+		        <tbody >
+		          <tr ng-repeat="provee in proveedor">
+			            <td>{{provee.userId}}</td>
+			            <td>{{provee.title}}</td>
+			            <td>{{provee.id}}</td>
+		          </tr>		         
+		        </tbody>
+      		</table>
+      		<br><br>
+      		<!--fin de la tabla-->
+
+  		
+
+		</div>						
+		</div>
+		</article>
+				
+
+	<!--fin de la seccion principal--> 

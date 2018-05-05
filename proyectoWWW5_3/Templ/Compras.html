@@ -1,0 +1,94 @@
+<article>
+<div class="container">
+<div class="section">
+
+	<!--formulario-->
+	  <form class="row">
+	    <form class="col s12 ">
+	      <div class="row">
+	       <div class="col s2">
+	       	<br>
+			    <select class="browser-default" ng-model="nuevacompraa.id">
+			      <option value="" disabled selected>ID proveedor</option>
+			      <option value="1">1</option>
+			      <option value="2">2</option>
+			      <option value="3">3</option>
+			    </select>
+			    
+			</div>
+	        <div class="input-field col s5">
+	          <input  id="NomVendedor" type="text" class="validate" ng-model="nuevacompraa.title">
+	          <label for="NomVendedor">Nombre del Vendedor</label>  
+	        </div>
+	        <div class="input-field col s5">
+	          <input  id="last_name" type="text" class="validate" ng-model="nuevacompraa.userId">
+	          <label for="last_name">Nombre del Cliente</label>
+	        </div>
+	      </div>
+	      <div class="row col s2">
+	      	<div class="input-field col s5">
+	          <input  id="Num" type="integer" class="validate" ng-model="numero"> 
+	      	</div>
+	      </div>
+
+
+	    </form>
+    </form>
+    <!--fin formulario-->
+
+		<!--botones-->
+		<div class=" row ">
+			 
+  			<div class="input-field col l2 s12">
+  				<button ng-click="addPost()" class="waves-effect blue btn">Agregar</button>
+  			</div>
+  			<div class="input-field col l2 s12 ">
+  				<button ng-click="editar()" class="waves-effect blue btn">Actulizar</button>
+  			</div>      				
+				
+		</div>
+		<br><br>
+		<!--fin de los botones-->
+
+
+	<!--tabla de compra de los productos-->
+	<table class="responsive-table striped highlight col s12">
+        <thead>
+          <tr>
+              <th>Codigo</th>
+              <th>Nombre del Producto</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Encargos</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="compra in compraa">
+	            <td>{{compra.id}}</td>
+	            <td>{{compra.title}}</td>
+	            <td>{{compra.id}}</td>
+	            <td>{{compra.id}}</td>
+	            <td>{{compra.id}}</td>
+          </tr>
+        </tbody>
+		</table>
+		<br><br>
+		<!-- fin de la tabla-->
+
+		<!--botones-->
+		<div class=" row ">
+			<div class="col s12 "> 
+  			<div class="input-field col l2 s12">
+  				<a class="waves-effect blue btn">Compra</a>      				
+  			</div>
+  			<div class="input-field col l2 s12">
+  				<a class="waves-effect blue btn">Cancelar</a>      				
+  			</div>      				
+			</div>  			
+		</div>
+		<br><br>
+		<!--fin de los botones-->
+</div>						
+</div>
+</article>
